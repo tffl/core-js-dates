@@ -67,9 +67,9 @@ function getDayName(date) {
  */
 function getNextFriday(date) {
   const currentDate = new Date(date);
-  const currentDayOfWeek = currentDate.getDay();
-  const daysUntilNextFriday = currentDayOfWeek === 5 ? 7 : (5 - currentDayOfWeek + 7) % 7;
-  currentDate.setDate(currentDate.getDate() + daysUntilNextFriday);
+  const currentDay = currentDate.getDay();
+  const NextFriday = currentDay === 5 ? 7 : (5 - currentDay + 7) % 7;
+  currentDate.setDate(currentDate.getDate() + NextFriday);
   return currentDate;
 }
 
